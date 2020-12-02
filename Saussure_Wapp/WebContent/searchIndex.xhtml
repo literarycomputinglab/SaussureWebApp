@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+   <h:head>
+   		<h:outputStylesheet library="css" name="my-style.css"  />
+		<title>Search and Index</title>
+		
+		<style type="text/css">
+                .nestedUnit {
+                    border:0px none !important;
+                }
+
+         </style>
+		
+   </h:head>
+   
+   <h:body>
+   		<p:layout  style="min-width:400px;min-height:200px;" id="layout" >
+		    <p:layoutUnit position="west" size="200" header="Left" resizable="true" closable="true" collapsible="true">
+		        <h:form>
+		            <ui:include src="templates/indexesLeft.xhtml" />
+		        </h:form>
+				<!--<h:outputText value="west" />-->
+		    </p:layoutUnit>
+		    
+		    <p:layoutUnit style="text-align:center" styleClass="center" position="center">
+		            <div align="center">
+						  <ui:include src="templates/searchAndResults.xhtml" />  
+					
+					</div>
+				<!--<h:outputText value="centro" />-->
+		    </p:layoutUnit>
+		
+			</p:layout>
+		   		
+			<p:dialog header="Word Detail" widgetVar="wordDialog" modal="true" showEffect="fade">
+					<h:outputText value="You selected: #{queryIndexBean.selectedWord}" />
+			</p:dialog>
+   		
+   </h:body>
+   
+</html>

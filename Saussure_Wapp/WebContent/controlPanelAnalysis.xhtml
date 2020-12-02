@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<style type="text/css">
+		.noborder  {
+                border: 0px none !important;
+                padding: 2px !important;
+            }
+         
+         tr.ui-widget-content,tr.ui-widget-content>td {
+         		border: 0px none !important;
+         		vertical-align: top;
+         		width: 50%;
+         }
+		</style>
+		<h:outputStylesheet library="css" name="my-style.css"  />
+		<title>#{msg['application']} Control Panel</title>
+	</h:head>
+	
+<h:body>	
+		
+    <p:layout fullPage="true">
+
+    <p:layoutUnit position="north" size="110" header="#{msg['application']} Application v.#{msg['version']}" resizable="false" closable="false" collapsible="false" >
+        <!-- <p:graphicImage value="#{resource['images/manoscritto-ara.jpg']}" /> -->
+         <h:form>  
+			<p:menubar >  
+		        <p:menuitem value="Home" url="controlPanel.xhtml" target="" />  
+		    
+		        <p:menuitem value="Search" url="controlPanelSearch.xhtml" target="" />  
+		        
+		        <p:menuitem value="View parallel resurces" url="controlPanelViewGreek.xhtml" styleClass="ui-state-active" target="" />
+		        
+		        <p:menuitem value="Manage resurces" url="."  disabled="true" />  
+		    
+		        <p:menuitem value="Manage witnesses" url="." disabled="true"  />  
+		        
+		        <p:menuitem value="Comment" url="controlPanelComment.xhtml"  target="" />
+		        
+		        <p:menuitem value="Linguistic Analysis" url="." styleClass="ui-state-active" target="" />
+		        
+		    </p:menubar> 	
+		 </h:form>  
+    </p:layoutUnit>
+
+    <p:layoutUnit position="south" size="75" header="#{msg['footer.message']}" resizable="false" closable="false" collapsible="false">
+        <!-- <h:outputText value="Copyright &copy; - ILC-CNR" />  -->
+        <h:graphicImage height="15px" value="#{resource['images/cc-by-sa_h30.png']}" />
+        <h:graphicImage height="15px" value="#{resource['images/gpl-logo_h20.png']}" />
+        <h:outputText style="font-size:14px; font-style:italic" value="ILC-CNR #{msg['footer.year']}" />
+    </p:layoutUnit>
+
+
+	
+ 	
+    <p:layoutUnit position="center" id="centerUnit">
+         
+            <div align="center">
+				<ui:include src="templates/analysis.xhtml" />
+			</div>
+         	
+		<!--<h:outputText value="centro" />-->
+    </p:layoutUnit>
+
+	</p:layout>
+
+</h:body>
+	
+</html>

@@ -1,0 +1,28 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:h="http://java.sun.com/jsf/html"
+            xmlns:f="http://java.sun.com/jsf/core"
+            xmlns:ui="http://java.sun.com/jsf/facelets"
+            xmlns:p="http://primefaces.org/ui">
+
+			
+	<p:dataList value="#{tableBean.macros}" var="macro"
+		paginator="true" rows="10" effectSpeed="fast"
+		paginatorTemplate="{PreviousPageLink} {CurrentPageReport} {NextPageLink} {RowsPerPageDropdown}"
+		rowsPerPageTemplate="5,10,15">
+
+        <f:facet name="header">
+            Macros
+        </f:facet>
+		
+		<p:column>
+            <p:commandLink action="parallel_text.xhtml" title="View ParallelText" ajax="false">
+                <p:graphicImage value="#{resource['images/search.png']}"/> 
+                <f:setPropertyActionListener value="#{macro}" target="#{tableBean.selectedMacro}" />
+            </p:commandLink>
+
+            <h:outputText value="#{macro}" style="margin-left:10px" />
+		
+		</p:column>
+	</p:dataList>
+
+</ui:composition>

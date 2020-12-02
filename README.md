@@ -13,7 +13,8 @@ Participants:
     Università di Salerno.
 
 The work was divided into the following stages:
-1 - digitalization of the manuscripts and their edition in TEI (Text Encoding Initiative) format [Università della Calabria and Università di Firenze];
-2 - creation of a text management system allowing the parallel visualization of the manuscripts and the respective digitalized texts, their annotation, 
+
+    1 - digitalization of the manuscripts and their edition in TEI (Text Encoding Initiative) format [Università della Calabria and Università di Firenze];
+    2 - creation of a text management system allowing the parallel visualization of the manuscripts and the respective digitalized texts, their annotation, 
     their processing, the consultation and query of the corpus of texts, the automatic creation of indices of forms [ILC-CNR];
-3 - creation of an electronic thesaurus-lexicon of the saussurian terminology [ILC-CNR].
+    3 - creation of an electronic thesaurus-lexicon of the saussurian terminology [ILC-CNR].
